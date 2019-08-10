@@ -1,0 +1,16 @@
+li {
+    list-style-type: none;
+    display: inline;
+    padding: 5px;
+    font-size: 34px;
+}
+
+.handicapDiv{
+    align-items: center;
+    justify-content: center;
+}
+
+.cardTitle {
+    font-size: 48px;
+}
+

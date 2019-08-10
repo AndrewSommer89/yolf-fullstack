@@ -1,0 +1,30 @@
+.formInput{
+    width: 100px;
+}
+
+
+body{
+    align-content: center;
+}
+Form{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    display: inline-block;
+    padding: 25px;
+}
+
+h1{
+    align-content: center;
+}
+
+.addScoreForm{
+    margin-top: 50px;
+    width: 500px;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 35px;
+    background-color: #487129;
+}
