@@ -19,6 +19,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(logger('dev'));
 
+if (process.env.NODE_ENV === 'production') {
+    // Exprees will serve up production assets
+    app.use(express.static(path.join(__dirname,'/../client/build')));
+    
+    // Express serve up index.html file if it doesn't recognize route
+    app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + '/../client/build/index.html'));
+    });
+    } else{
+    app.use(express.static('../client/public'))
+    }
 const scoreRoutes = require("./routes/ScoreRoutes");
 const courseRoutes = require("./routes/CourseRoutes");
 
