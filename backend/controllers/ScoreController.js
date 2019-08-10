@@ -18,6 +18,7 @@ exports.show = function(req,res){
     });
 }
 
+
 //create new score
 exports.create = function(req,res){
     let body = req.body;
@@ -26,6 +27,7 @@ exports.create = function(req,res){
         course: body.course,
         teebox: body.teebox,
         totalScore: body.totalScore,
+        handicapScore: body.handicapScore,
         totalPutts: body.totalPutts,
         scoreToPar: body.scoreToPar,
         eagles: body.eagles,
@@ -49,6 +51,7 @@ exports.update = function(req,res){
         else
             score.date = body.date;
             score.course = body.course;
+            score.handicapScore = body.handicapScore;
             score.totalScore = body.totalScore;
             score.totalPutts = body.totalPutts;
             score.scoreToPar = body.scoreToPar;
