@@ -6,8 +6,7 @@ const bodyParser = require('body-parser');
 const logger = require('morgan');
 const path = require('path');
 
-
-const API_PORT = 3001;
+let API_PORT = 3001;
 const app = express();
 app.use(cors());
 
@@ -37,5 +36,8 @@ const courseRoutes = require("./routes/CourseRoutes");
 app.use(scoreRoutes);
 app.use(courseRoutes);
 
+console.log('PROCESS PORT: ', process.env.PORT);
+console.log('API_PORT: ', API_PORT);
+
 // launch our backend into a port
-app.listen( process.env.PORT ||API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
+app.listen(process.env.PORT || API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
