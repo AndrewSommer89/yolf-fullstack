@@ -37,4 +37,4 @@ app.use(scoreRoutes);
 app.use(courseRoutes);
 
 // launch our backend into a port
-app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
+app.listen( process.env.PORT ||API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
