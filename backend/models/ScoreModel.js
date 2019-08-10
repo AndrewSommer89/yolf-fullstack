@@ -8,6 +8,9 @@ let scoreSchema = new Schema({
     course: {
         type: String
     },
+    teebox: {
+        type: String
+    },
     totalScore: {
         type: Number
     },

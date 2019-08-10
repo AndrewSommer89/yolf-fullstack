@@ -24,6 +24,7 @@ exports.create = function(req,res){
     let score = new Score({
         date: body.date,
         course: body.course,
+        teebox: body.teebox,
         totalScore: body.totalScore,
         totalPutts: body.totalPutts,
         scoreToPar: body.scoreToPar,
