@@ -30,7 +30,7 @@ if (process.env.NODE_ENV === 'production') {
     });
     } else{
     app.use(express.static('../client/public'))
-    }
+}
 const scoreRoutes = require("./routes/ScoreRoutes");
 const courseRoutes = require("./routes/CourseRoutes");
 
