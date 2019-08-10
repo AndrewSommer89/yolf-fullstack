@@ -19,7 +19,7 @@ export default class Stats extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:3001/scores/')
+        axios.get('api/scores/')
             .then(res => {
                 this.setState({
                     scores: res.data

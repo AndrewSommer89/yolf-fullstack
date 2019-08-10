@@ -35,7 +35,7 @@ export default class EditScore extends Component {
     }
 
     getScoreDetails(){
-        axios.get("http://localhost:3001/scores/"+this.props.match.params.id)
+        axios.get("http://localhost:3001/api/scores/"+this.props.match.params.id)
             .then(response => {
                 this.setState({
                     date: response.data.date,
@@ -59,7 +59,7 @@ export default class EditScore extends Component {
     }
 
     getCourses(){
-        axios.get('http://localhost:3001/courses')
+        axios.get('http://localhost:3001/api/courses')
             .then(res => {
                 this.setState({
                     courses: res.data
@@ -128,7 +128,7 @@ export default class EditScore extends Component {
             tripleBogeys: this.state.tripleBogeys
         };
         console.log(score)
-        axios.post("http://localhost:3001/scores/update/"+this.props.match.params.id,score)
+        axios.post("http://localhost:3001/api/scores/update/"+this.props.match.params.id,score)
             .then(res=> console.log(res.data));
         
         this.props.history.push("/scores");

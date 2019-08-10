@@ -31,7 +31,7 @@ export default class AddScoreForm extends Component {
     }
     //get the information from "/courses" to pass it down to courses component for course selector
     componentDidMount(){
-        axios.get('http://localhost:3001/courses')
+        axios.get('http://localhost:3001/api/courses')
             .then(res => {
                 this.setState({
                     courses: res.data
@@ -117,7 +117,7 @@ export default class AddScoreForm extends Component {
         };
         
     //send and save the new score to the database
-        axios.post("http://localhost:3001/scores", newScore)
+        axios.post("api/scores", newScore)
             .then(res=> console.log(res.data));
 
         

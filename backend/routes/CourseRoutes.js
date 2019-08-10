@@ -2,9 +2,9 @@ const express = require('express');
 const router = express.Router();
 const {list,show,create,find} = require('../controllers/CourseController')
 
-router.get('/courses',list);
-router.get('/courses/:id',show);
-router.get("/courses/name/:course",find);
-router.post('/courses',create);
+router.get('/api/courses',list);
+router.get('/api/courses/:id',show);
+router.get("/api/courses/name/:course",find);
+router.post('/api/courses',create);
 
 module.exports = router

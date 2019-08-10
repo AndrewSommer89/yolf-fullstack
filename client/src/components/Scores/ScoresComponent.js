@@ -32,7 +32,7 @@ export default class Scores extends Component {
     //retrieve the scores data from database
     componentDidMount(){
         //acces "/scores" endpoint
-        axios.get('http://localhost:3001/scores/')
+        axios.get('http://localhost:3001/api/scores/')
             .then(response => {
                 //assign data from endpoint to the scores property
                 this.setState({scores: response.data});
@@ -43,7 +43,7 @@ export default class Scores extends Component {
     }
 
     componentDidUpdate(){
-        axios.get('http://localhost:3001/scores/')
+        axios.get('http://localhost:3001/api/scores/')
             .then(response => {
                 this.setState({scores: response.data});
             })
